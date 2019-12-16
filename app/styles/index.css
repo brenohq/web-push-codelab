@@ -2,7 +2,8 @@ html {
   height: 100%;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   padding: 0;
   margin: 0;
@@ -19,7 +20,8 @@ header {
   color: white;
 }
 
-main, header > h1 {
+main,
+header > h1 {
   padding: 0 16px;
   max-width: 760px;
   box-sizing: border-box;
@@ -33,7 +35,7 @@ main {
 
 pre {
   white-space: pre-wrap;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   padding: 16px;
 }
 
