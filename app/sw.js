@@ -19,28 +19,28 @@
 
 /* eslint-env browser, serviceworker, es6 */
 
-"use strict"
+'use strict';
 
-self.addEventListener("notificationclick", function(event) {
-  console.log("[Service Worker] Notification click received.")
+self.addEventListener('notificationclick', function(event) {
+  console.log('[Service Worker] Notification click received.');
 
-  event.notification.close()
+  event.notification.close();
 
-  event.waitUntil(clients.openWindow("https://developers.google.com/web/"))
-})
+  event.waitUntil(clients.openWindow('https://developers.google.com/web/'));
+});
 
-self.addEventListener("push", function(event) {
-  console.log("[Service Worker] Push Received.")
-  console.log(`[Service Worker] Push had this data: "${event.data ? event.data.text() : "Default Text"}"`)
+self.addEventListener('push', function(event) {
+  console.log('[Service Worker] Push Received.');
+  console.log(`[Service Worker] Push had this data: "${event.data ? event.data.text() : 'Default Text'}"`);
 
-  const title = "Push Codelab"
+  const title = 'Push Codelab';
 
   const options = {
-    body: event.data ? event.data.text() : "Yay it works!",
-    icon: "images/icon.png",
-    badge: "images/badge.png"
-  }
+    body: event.data ? event.data.text() : 'Yay it works!',
+    icon: 'images/icon.png',
+    badge: 'images/badge.png'
+  };
 
-  const notificationPromise = self.registration.showNotification(title, options)
-  event.waitUntil(notificationPromise)
-})
+  const notificationPromise = self.registration.showNotification(title, options);
+  event.waitUntil(notificationPromise);
+});

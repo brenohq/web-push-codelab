@@ -9,5 +9,13 @@
   },
   "parserOptions": {
     "ecmaVersion": 6
+  },
+  "globals": {
+    "console": "readonly",
+    "document": "readonly",
+    "window": "readonly",
+    "navigator": "readonly",
+    "Uint8Array": "readonly",
+    "Notification": "readonly"
   }
 }
